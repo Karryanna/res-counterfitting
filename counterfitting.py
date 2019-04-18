@@ -485,13 +485,13 @@ def run_experiment(config_filepath):
 	if not current_experiment.pretrained_word_vectors:
 		return
 	
-	print "SimLex score (Spearman's rho coefficient) of initial vectors is:", \
-		   simlex_analysis(current_experiment.pretrained_word_vectors), "\n"
+	#print "SimLex score (Spearman's rho coefficient) of initial vectors is:", \
+	#	   simlex_analysis(current_experiment.pretrained_word_vectors), "\n"
 	
 	transformed_word_vectors = counter_fit(current_experiment)
 	
-	print "\nSimLex score (Spearman's rho coefficient) the counter-fitted vectors is:", \
-		   simlex_analysis(transformed_word_vectors), "\n"
+	#print "\nSimLex score (Spearman's rho coefficient) the counter-fitted vectors is:", \
+	#	   simlex_analysis(transformed_word_vectors), "\n"
 	
 	print_word_vectors(transformed_word_vectors, "results/counter_fitted_vectors.txt")
 
